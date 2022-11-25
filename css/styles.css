@@ -62,7 +62,14 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
+
+span:hover{
+    background-color: hsl(25, 97%, 53%) !important; 
+    color: hsl(0, 0%, 100%);
+}
+
 
 button{
     width:100%;
@@ -71,6 +78,7 @@ button{
     letter-spacing: 2px;
     padding:4%;    
     border-radius: 50px;
+    border-width: 0;
     cursor: pointer;
     background-color: hsl(25, 97%, 53%);   
     color: hsl(0, 0%, 100%);
@@ -83,4 +91,11 @@ button:hover{
 
 .oculto{
     display: none;
+}
+
+@media screen and (max-width: 420px) {
+    main{
+        width: 320px;
+        height: 340px;
+    }
 }

@@ -18,6 +18,18 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <script>
+    var seleccionado=null;
+    function changeState(id){
+      if(seleccionado){
+        seleccionado.style.backgroundColor = 'hsl(216, 12%, 24%)';
+        seleccionado.style.color = 'hsl(217, 12%, 63%)';
+      }
+      seleccionado=document.getElementById(id);
+      seleccionado.style.backgroundColor = 'hsl(217, 12%, 63%)';
+      seleccionado.style.color = 'hsl(0, 0%, 100%)';
+    }
+  </script>
 </head>
 <body>
   <main>
@@ -32,11 +44,11 @@
     to help us improve our offering!</p>
 
     <div class="ratings">
-      <span>1</span>
-      <span> 2 </span>
-      <span> 3 </span>
-      <span>4 </span>
-      <span>5</span>
+      <span id="b1" onclick="changeState(this.id)">1</span>
+      <span id="b2" onclick="changeState(this.id)"> 2 </span>
+      <span id="b3" onclick="changeState(this.id)"> 3 </span>
+      <span id="b4" onclick="changeState(this.id)">4 </span>
+      <span id="b5" onclick="changeState(this.id)">5</span>
     </div>
 
     <button>SUBMIT</button>
@@ -57,7 +69,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Arturo Navarro</a>.
+    Coded by <a href="https://www.github.com/chopinex">Arturo Navarro</a>.
   </div>
 </body>
 </html>
