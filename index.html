@@ -26,8 +26,15 @@
         seleccionado.style.color = 'hsl(217, 12%, 63%)';
       }
       seleccionado=document.getElementById(id);
+      resultado=document.getElementById("puntaje");
       seleccionado.style.backgroundColor = 'hsl(217, 12%, 63%)';
       seleccionado.style.color = 'hsl(0, 0%, 100%)';
+      resultado.innerHTML="&nbsp;"+seleccionado.innerHTML+"&nbsp;";
+    }
+
+    function thanks(){
+      document.getElementsByClassName("rating-state")[0].classList.add("oculto");
+      document.getElementsByClassName("thanks-state")[0].classList.remove("oculto");
     }
   </script>
 </head>
@@ -51,18 +58,21 @@
       <span id="b5" onclick="changeState(this.id)">5</span>
     </div>
 
-    <button>SUBMIT</button>
+    <button onclick="thanks()">SUBMIT</button>
   </div>
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
-  <div class="thanks oculto">
-  You selected <!-- Add rating here --> out of 5
+  <div class="thanks-state oculto">
+    <div class="thanks-image">
+      <img src="./images/illustration-thank-you.svg" alt="thank you" />
+    </div>
+  <div class="selected-message">You selected <span id="puntaje">0</span> out of 5</div>
 
-  Thank you!
+  <h1>Thank you!</h1>
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
+  <p class="p-centrado">We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!</p>
   </div>
   <!-- Thank you state end -->
   </main>
